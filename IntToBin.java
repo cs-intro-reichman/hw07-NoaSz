@@ -8,11 +8,14 @@ public class IntToBin {
 
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
-         // Base cases
-    if (x == 0) return "0";
-    if (x == 1) return "1";
-
-    // Recursive case
-    return toBinary(x / 2) + (x % 2);
-    }    
- }
+        if (x == 0) {
+            return "0";
+        }
+        // Base case for recursive calls
+        if (x == 1) {
+            return "1";
+        }
+        // Recursive case: divide x by 2 and append the remainder
+        return toBinary(x / 2) + (x % 2);
+    }
+}
