@@ -7,7 +7,20 @@ public class IsSorted {
 
     // Helper recursive function
     private static boolean isSorted(int[] a, int i) {
-        //// Replace the following statement with your code
+        // Base case: empty array, single element, or reached the end
+        if (i >= a.length - 1) {
+            return true;
+        }
+
+        // If current pair is out of order
+        if (a[i] > a[i + 1]) {
+            return false;
+        }
+
+        // Recursive call on the rest of the array
+        return isSorted(a, i + 1);
+    }
+ 
         return false; 
     }
 
